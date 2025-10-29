@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>یه سوال مهم 😳</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #2d2596, #1747a1);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .box {
+      background: rgba(134, 231, 192, 0.381);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(209, 107, 107, 0.1);
+    }
+
+    h1 {
+      color: #d0cddf;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #66ff7d;
+      color: white;
+    }
+
+    #no {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h>دوست من میشی؟🥺</h1>
+    <button id="yes">Yes 🫦</button>
+    <button id="no">No 🖕🏻</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    yesBtn.addEventListener("click", () => {
+      // وقتی Yes کلیک میشه، بفرستش صفحه بعد
+      window.location.href = "emoji.html";
+    });
+  </script>
+
+</body>
+
+</html>
